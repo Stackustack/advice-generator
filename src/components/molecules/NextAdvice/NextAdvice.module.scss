@@ -1,0 +1,44 @@
+@use './../../../styles/constants.scss' as c;
+@use './../../../styles/mixins.scss' as m;
+
+.nextAdvice {
+    @include m.flex($justify: center, $align: center);
+    width: 80px;
+    height: 80px;
+    background-color: c.$color-active-green;
+    border-radius: 40px;
+    transition: all 0.2s ease-in-out
+}
+
+.nextAdvice--loading {
+    background-color: grey;
+}
+
+.icon {
+    transform: scale(1.25);
+}
+
+.icon--spinning {
+    animation: rotating 1s linear infinite;
+}
+
+@keyframes rotating {
+    0% {
+        animation-timing-function: ease-in;
+        transform: rotate( 0deg ) scale( 1 );
+    }
+    25% {
+        animation-timing-function: ease-out;
+        transform: rotate( -180deg ) scale( 1.4 );
+    }
+    50%, 100% {
+        transform: rotate( -360deg ) scale( 1 );
+    }
+}
+
+@media (min-width: 600px) {
+    .nextAdvice:hover {
+        background-color: c.$color-active-green-light;
+        border-radius: 30px;
+    }
+}

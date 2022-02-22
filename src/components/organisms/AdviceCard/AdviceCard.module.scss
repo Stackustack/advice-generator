@@ -1,0 +1,62 @@
+@use '/src/styles/constants.scss' as c;
+@use '/src/styles/mixins.scss' as m;
+
+.adviceCard {
+    @include m.flex($direction: column, $align: center, $justify: center);
+    gap: 30px;
+    border-radius: 15px;
+    background-color: c.$color-grey;
+    padding: 40px 20px 80px;
+    position: relative;
+    margin: 0 10%;
+    width: 90%;
+    max-width: 600px;
+}
+
+.q {
+    display: block;
+    font-size: 28px;
+    font-weight: 800;
+    color: c.$color-light-grey;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.qLoading {
+    opacity: 0.2;
+}
+
+.divider {
+    @include m.backgroundImgTakesEntireWidth(
+        $url: url('../../../assets/pattern-divider-mobile.svg'), 
+        $width: 295, 
+        $height: 16
+    )
+}
+
+.h3 {
+    font-weight: 13px;
+    font-weight: 800;
+    color: c.$color-active-green;
+    transition: font-size 1s
+}
+
+.h3Loading {
+    font-size: 30px;
+}
+
+.nextAdvice {
+    position: absolute;
+    bottom: -40px;
+}
+
+@media (min-width: 600px) {
+    .divider {
+        @include m.backgroundImgTakesEntireWidth(
+            $url: url('../../../assets/pattern-divider-desktop.svg'), 
+            $width: 444, 
+            $height: 16
+        )
+    }
+}
