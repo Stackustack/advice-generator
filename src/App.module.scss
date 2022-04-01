@@ -1,8 +1,7 @@
-@use './styles/index.scss';
-@use '/src/styles/mixins.scss' as m;
+// @use './styles/index.scss';
+// @use '/src/styles/mixins.scss' as m;
 
-.app_wrapper {
-    @include m.flex($direction: column, $align: center, $justify: center);
-    background-color: index.$color-dark-blue;
-    height: 100vh;
-}
+// .app_wrapper {
+//     @include m.flex($direction: column, $align: center, $justify: center);
+//     height: 100vh;
+// }

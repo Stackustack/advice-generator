@@ -7,7 +7,10 @@
     height: 80px;
     background-color: c.$color-active-green;
     border-radius: 40px;
-    transition: all 0.2s ease-in-out
+    transition: all 0.2s ease-in-out;
+
+    position: absolute;
+    bottom: -40px;
 }
 
 .nextAdvice--loading {
